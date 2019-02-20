@@ -1,3 +1,5 @@
+package chp2.tcp;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,6 +12,13 @@ import java.net.Socket;
  * @date 2019-02-20
  * @desp
  */
+
+/**
+ * 完成的功能
+ * 1. 构建TCP客户端、服务端
+ * 2. 客户端发送数据
+ * 3. 服务器读取数据并打印
+ */
 public class Server {
 
     public static void main(String[] args) throws IOException {
@@ -19,6 +28,7 @@ public class Server {
 
         System.out.println("服务器准备就绪");
         System.out.println("服务器信息: " + server.getInetAddress() + ", " + server.getLocalPort());
+
 
         //等待客户端连接
         for(;;){
@@ -80,7 +90,7 @@ public class Server {
                 }
             }
 
-            System.out.println("客户端已关闭");
+            System.out.println("客户端已关闭,客户端信息: " + socket.getInetAddress() + ", " + socket.getPort());
         }
     }
 }

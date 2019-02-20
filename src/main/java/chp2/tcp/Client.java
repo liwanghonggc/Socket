@@ -1,3 +1,5 @@
+package chp2.tcp;
+
 import java.io.*;
 import java.net.Inet4Address;
 import java.net.InetSocketAddress;
@@ -56,7 +58,7 @@ public class Client {
 
             //从服务器接收一行数据
             String echo = socketBufferedReader.readLine();
-            if("echo".equalsIgnoreCase(echo)){
+            if("bye".equalsIgnoreCase(echo)){
                 flag = false;
             }else {
                 System.out.println(echo);
