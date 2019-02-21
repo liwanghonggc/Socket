@@ -20,7 +20,6 @@ public class Server {
             return;
         }
 
-
         UDPProvider.start(TCPConstants.PORT_SERVER);
 
         try {

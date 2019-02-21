@@ -2,6 +2,7 @@ package chp5.client;
 
 import chp5.client.bean.ServerInfo;
 import chp5.constants.UDPConstants;
+import chp5.utils.ByteUtils;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
