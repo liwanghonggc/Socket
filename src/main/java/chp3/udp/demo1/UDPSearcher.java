@@ -1,4 +1,4 @@
-package chp3.udp;
+package chp3.udp.demo1;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
