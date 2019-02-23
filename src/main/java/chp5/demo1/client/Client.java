@@ -1,6 +1,6 @@
-package chp5.client;
+package chp5.demo1.client;
 
-import chp5.client.bean.ServerInfo;
+import chp5.demo1.client.bean.ServerInfo;
 
 /**
  * @author lwh
@@ -10,6 +10,7 @@ import chp5.client.bean.ServerInfo;
 public class Client {
 
     public static void main(String[] args) {
+        //UDP广播搜索并监听,得到服务器的IP地址与端口信息
         ServerInfo info = UDPSearcher.searchServer(10000);
         System.out.println("Server: " + info);
 

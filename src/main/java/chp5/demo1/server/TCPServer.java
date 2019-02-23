@@ -1,4 +1,4 @@
-package chp5.server;
+package chp5.demo1.server;
 
 import java.io.BufferedReader;
 import java.io.IOException;

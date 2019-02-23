@@ -1,6 +1,6 @@
-package chp5.server;
+package chp5.demo1.server;
 
-import chp5.constants.TCPConstants;
+import chp5.demo1.constants.TCPConstants;
 
 import java.io.IOException;
 

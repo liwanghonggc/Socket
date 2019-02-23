@@ -1,6 +1,6 @@
-package chp5.client;
+package chp5.demo1.client;
 
-import chp5.client.bean.ServerInfo;
+import chp5.demo1.client.bean.ServerInfo;
 
 import java.io.*;
 import java.net.Inet4Address;

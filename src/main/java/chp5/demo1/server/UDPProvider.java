@@ -1,9 +1,7 @@
-package chp5.server;
+package chp5.demo1.server;
 
-import chp5.constants.UDPConstants;
-import chp5.utils.ByteUtils;
-import com.sun.corba.se.impl.interceptors.PICurrent;
-
+import chp5.demo1.constants.UDPConstants;
+import chp5.demo1.utils.ByteUtils;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -89,6 +87,7 @@ public class UDPProvider {
                                        ((clientData[index++] & 0xff) << 16) |
                                        ((clientData[index++] & 0xff) << 8) |
                                        ((clientData[index] & 0xff));
+
 
                     //判断合法性,1代表搜索命令
                     if(cmd == 1 && responsePort > 0){
