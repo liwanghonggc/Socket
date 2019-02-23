@@ -1,7 +1,7 @@
-package chp6.server;
+package chp6.demo1.server;
 
-import chp6.constants.UDPConstants;
-import chp6.utils.ByteUtils;
+import chp6.demo1.constants.UDPConstants;
+import chp6.demo1.utils.ByteUtils;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

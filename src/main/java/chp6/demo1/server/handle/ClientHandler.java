@@ -1,6 +1,6 @@
-package chp6.server.handle;
+package chp6.demo1.server.handle;
 
-import chp6.utils.CloseUtils;
+import chp6.demo1.utils.CloseUtils;
 
 import java.io.*;
 import java.net.Socket;

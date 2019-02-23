@@ -1,4 +1,4 @@
-package chp6.constants;
+package chp6.demo2.constants;
 
 /**
  * @author lwh

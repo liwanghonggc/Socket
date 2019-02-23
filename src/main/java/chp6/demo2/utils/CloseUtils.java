@@ -1,4 +1,4 @@
-package chp6.utils;
+package chp6.demo2.utils;
 
 import java.io.Closeable;
 import java.io.IOException;

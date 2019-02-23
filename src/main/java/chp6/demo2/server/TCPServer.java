@@ -1,6 +1,6 @@
-package chp6.server;
+package chp6.demo2.server;
 
-import chp6.server.handle.ClientHandler;
+import chp6.demo2.server.handle.ClientHandler;
 
 import java.io.IOException;
 import java.net.ServerSocket;
