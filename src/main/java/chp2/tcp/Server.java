@@ -34,7 +34,7 @@ public class Server {
         for(;;){
             //得到客户端
             Socket client = server.accept();
-            //客户端构建异步线程
+            //客户端构建异步线程,不要阻塞这里
             ClientHandler clientHandler = new ClientHandler(client);
             clientHandler.start();
         }
