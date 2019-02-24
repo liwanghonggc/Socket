@@ -1,6 +1,6 @@
-package chp7.client;
+package chp7.demo1.client;
 
-import chp7.client.bean.ServerInfo;
+import chp7.demo1.client.bean.ServerInfo;
 
 /**
  * @author lwh

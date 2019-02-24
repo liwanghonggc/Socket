@@ -1,4 +1,4 @@
-package chp7.client.bean;
+package chp7.demo1.client.bean;
 
 /**
  * @author lwh

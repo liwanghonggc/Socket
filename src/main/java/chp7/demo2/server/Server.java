@@ -1,6 +1,6 @@
-package chp7.server;
+package chp7.demo2.server;
 
-import chp7.constants.TCPConstants;
+import chp7.demo2.constants.TCPConstants;
 
 import java.io.BufferedReader;
 import java.io.IOException;

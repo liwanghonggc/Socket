@@ -1,7 +1,7 @@
-package chp7.client;
+package chp7.demo1.client;
 
-import chp7.client.bean.ServerInfo;
-import chp7.utils.CloseUtils;
+import chp7.demo1.client.bean.ServerInfo;
+import chp7.demo1.utils.CloseUtils;
 
 import java.io.*;
 import java.net.Inet4Address;
