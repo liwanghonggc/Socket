@@ -3,6 +3,7 @@ package chp7.demo2.library.core;
 import java.io.IOException;
 
 public class IoContext {
+
     private static IoContext INSTANCE;
     private final IoProvider ioProvider;
 
@@ -18,8 +19,8 @@ public class IoContext {
         return INSTANCE;
     }
 
-    public static StartedBoot setup() {
-        return new StartedBoot();
+    public static StartBoot setup() {
+        return new StartBoot();
     }
 
     public static void close() throws IOException {
@@ -32,14 +33,14 @@ public class IoContext {
         ioProvider.close();
     }
 
-    public static class StartedBoot {
+    public static class StartBoot {
         private IoProvider ioProvider;
 
-        private StartedBoot() {
+        private StartBoot() {
 
         }
 
-        public StartedBoot ioProvider(IoProvider ioProvider) {
+        public StartBoot ioProvider(IoProvider ioProvider) {
             this.ioProvider = ioProvider;
             return this;
         }

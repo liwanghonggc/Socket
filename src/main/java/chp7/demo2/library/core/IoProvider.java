@@ -3,7 +3,14 @@ package chp7.demo2.library.core;
 import java.io.Closeable;
 import java.nio.channels.SocketChannel;
 
+/**
+ * 所有的连接都可以通过IoProvider来注册、解除连接
+ */
 public interface IoProvider extends Closeable {
+
+    /**
+     * 注册输入
+     */
     boolean registerInput(SocketChannel channel, HandleInputCallback callback);
 
     boolean registerOutput(SocketChannel channel, HandleOutputCallback callback);
