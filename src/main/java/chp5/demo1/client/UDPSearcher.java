@@ -21,6 +21,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class UDPSearcher {
 
+    //UDP在此端口上监听UDP搜索回送回来的消息
     private static final int LISTEN_PORT = UDPConstants.PORT_CLIENT_RESPONSE;
 
     public static ServerInfo searchServer(int timeout) {
@@ -103,6 +104,7 @@ public class UDPSearcher {
         private final CountDownLatch receiveDownLatch;
         private final List<ServerInfo> serverInfoList = new ArrayList<>();
         private final byte[] buffer = new byte[128];
+        //消息最少长度,公共头部+CMD命令+端口号
         private final int minLen = UDPConstants.HEADER.length + 2 + 4;
         private boolean done = false;
         private DatagramSocket ds = null;
