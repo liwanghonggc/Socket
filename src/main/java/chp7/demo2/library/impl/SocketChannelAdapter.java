@@ -122,7 +122,7 @@ public class SocketChannelAdapter implements Sender, Receiver, Cloneable {
                     throw new IOException("Cannot read any data!");
                 }
             }catch (IOException ignored){
-                CloseUtils.close(SocketChannelAdapter.this::close);
+                CloseUtils.close(SocketChannelAdapter.this);
             }
 
         }

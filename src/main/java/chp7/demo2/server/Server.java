@@ -1,6 +1,8 @@
 package chp7.demo2.server;
 
 import chp7.demo2.constants.TCPConstants;
+import chp7.demo2.library.core.IoContext;
+import chp7.demo2.library.impl.IoSelectorProvider;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,6 +16,8 @@ import java.io.InputStreamReader;
 public class Server {
 
     public static void main(String[] args) throws IOException {
+
+        IoContext.setup().ioProvider(new IoSelectorProvider()).start();
 
         //先启动TCPServer接收客户端的TCP连接
         TCPServer tcpServer = new TCPServer(TCPConstants.PORT_SERVER);
@@ -35,5 +39,7 @@ public class Server {
 
         UDPProvider.stop();
         tcpServer.stop();
+
+        IoContext.close();
     }
 }
