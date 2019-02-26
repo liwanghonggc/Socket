@@ -17,6 +17,7 @@ public class Server {
 
     public static void main(String[] args) throws IOException {
 
+        //我理解为这里就是启动了输入输出的监听
         IoContext.setup().ioProvider(new IoSelectorProvider()).start();
 
         //先启动TCPServer接收客户端的TCP连接

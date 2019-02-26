@@ -29,8 +29,8 @@ public class Connector implements Closeable, SocketChannelAdapter.OnChannelStatu
         IoContext context = IoContext.get();
         SocketChannelAdapter adapter = new SocketChannelAdapter(channel, context.getIoProvider(), this);
 
-        this.sender = sender;
-        this.receiver = receiver;
+        this.sender = adapter;
+        this.receiver = adapter;
 
         readNextMessage();
     }
