@@ -25,6 +25,9 @@ public class ClientHandler {
     private final ClientHandlerCallback clientHandlerCallback;
     private final String clientInfo;
 
+    /**
+     * 服务端先是使用一个selector来accept连接,accept到了以后来到这里处理
+     */
     public ClientHandler(SocketChannel socketChannel, ClientHandlerCallback clientHandlerCallback) throws IOException {
         this.socketChannel = socketChannel;
 
@@ -42,6 +45,8 @@ public class ClientHandler {
                 clientHandlerCallback.onNewMessageArrived(ClientHandler.this, str);
             }
         };
+
+        this.connector = connector;
 
         connector.setup(socketChannel);
 

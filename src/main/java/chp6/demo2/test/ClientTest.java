@@ -32,7 +32,7 @@ public class ClientTest {
         //当前连接数量
         int size = 0;
         List<TCPClient> tcpClients = new ArrayList<>();
-        for(int i = 0; i < 1000; i++){
+        for(int i = 0; i < 10; i++){
             try {
                 TCPClient tcpClient = TCPClient.startWith(info);
                 if(tcpClient == null){
@@ -54,7 +54,7 @@ public class ClientTest {
             }
         }
 
-        System.in.read();
+        //System.in.read();
 
         Runnable runnable = new Runnable() {
             @Override

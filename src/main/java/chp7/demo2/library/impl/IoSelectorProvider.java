@@ -54,7 +54,7 @@ public class IoSelectorProvider implements IoProvider {
         inputHandPool = Executors.newFixedThreadPool(4, new IoProviderThreadFactory("IoProvider-Input-Thread"));
         outputHandPool = Executors.newFixedThreadPool(4, new IoProviderThreadFactory("IoProvider-Output-Thread"));
 
-        //开始输入输出的监听
+        //先开始输入输出的监听,此时还没有accept到客户端连接,后续是accept到了连接以后,若连接有数据到来就会被select到
         startRead();
         startWrite();
     }
@@ -126,6 +126,7 @@ public class IoSelectorProvider implements IoProvider {
 
     @Override
     public boolean registerInput(SocketChannel channel, HandleInputCallback callback) {
+        //callback这里传递的是具体的读取操作
         return regiserSelection(channel, readSelector, SelectionKey.OP_READ, inReqInput, inputCallbackMap, callback) != null;
     }
 
